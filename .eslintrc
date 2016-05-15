@@ -2,13 +2,13 @@
   "parser": "babel-eslint",
   "extends": "airbnb",
   "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true,
-      "modules": true
+    "jsx": true,
+    "experimentalObjectRestSpread": true,
+    "modules": true
   },
   "rules": {
     "import/no-unresolved": 0,
-    "no-param-reassign": 0,
+    "no-param-reassign": 0
   },
   "globals": {
     "__DEV__": true

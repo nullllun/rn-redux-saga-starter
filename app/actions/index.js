@@ -5,3 +5,9 @@ export {
   navigateJumpToIndex,
   navigateReset,
 } from './navigation';
+
+export {
+  fetchUser,
+  fetchUserFailed,
+  fetchUserSuccess,
+} from './user';

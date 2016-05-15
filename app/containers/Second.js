@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
-import { navigatePush } from '../actions';
+import * as actions from '../actions';
 
 import NavButton from '../components/NavButton';
 
@@ -32,9 +32,7 @@ Second.propTypes = {
 
 const mapStateToProps = () => ({});
 const mapDispatchToProps = (dispatch) => ({
-  onButtonPress: () => {
-    dispatch(navigatePush('Third'));
-  },
+  onButtonPress: () => dispatch(actions.navigatePush('Third')),
 });
 
 export default connect(

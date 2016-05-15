@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { NavigationExperimental, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import * as actions from './actions';
 
 import First from './containers/First';
 import Second from './containers/Second';
 import Third from './containers/Third';
-import { navigatePush, navigatePop } from './actions';
 
 const {
 	AnimatedView: NavigationAnimatedView,
@@ -81,9 +81,9 @@ export default connect(
 			action.type === NavigationRootContainer.getBackAction().type ||
 			action.type === NavigationCard.CardStackPanResponder.Actions.BACK.type)
 		) {
-      dispatch(navigatePop());
+      dispatch(actions.navigatePop());
     } else {
-      dispatch(navigatePush(action));
+      dispatch(actions.navigatePush(action));
     }
   },
 	})

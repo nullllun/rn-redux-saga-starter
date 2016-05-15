@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
-import { navigateReset } from '../actions';
+import * as actions from '../actions';
 
 import NavButton from '../components/NavButton';
 
@@ -33,7 +33,7 @@ Third.propTypes = {
 const mapStateToProps = () => ({});
 const mapDispatchToProps = (dispatch) => ({
   onButtonPress: () => {
-    dispatch(navigateReset([{
+    dispatch(actions.navigateReset([{
       key: 'First',
       title: 'First',
     }], 0));

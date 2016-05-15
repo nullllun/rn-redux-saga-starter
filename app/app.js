@@ -1,13 +1,20 @@
 import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-
-import reducers from './reducers/index';
 import Router from './router';
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-const store = createStoreWithMiddleware(reducers);
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { Provider } from 'react-redux';
+import reducers from './reducers/index';
+
+import { sagas } from './sagas/index';
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(
+  reducers,
+  applyMiddleware(sagaMiddleware)
+);
+
+sagaMiddleware.run(sagas);
 
 const App = () =>
   <Provider store={store}>

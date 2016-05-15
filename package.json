@@ -1,0 +1,38 @@
+{
+  "name": "rn-redux-saga-starter",
+  "version": "0.0.1",
+  "description": "Get started with React Native, NavigationExperimental, Redux, Redux Saga.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paolorovella/rn-redux-saga-starter"
+  },
+  "author": "Paolo Rovella <paolo.rovella@gmail.com> (http://github.com/paolorovella)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paolorovella/rn-redux-saga-starter/issues"
+  },
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios"
+  },
+  "engines": {
+    "node": ">=4",
+    "npm": ">=2 <4"
+  },
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-native": "0.25.1",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "redux-thunk": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.6.0",
+    "eslint-plugin-jsx-a11y": "^1.0.3",
+    "eslint-plugin-react": "^5.0.1"
+  }
+}

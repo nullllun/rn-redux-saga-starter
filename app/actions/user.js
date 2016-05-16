@@ -19,7 +19,6 @@ export function fetchUserFailed(message) {
 }
 
 export function fetchUserSuccess(userData) {
-  console.log(userData);
   return {
     type: USER_FETCH_SUCCEDED,
     userData,

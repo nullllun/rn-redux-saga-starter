@@ -21,17 +21,21 @@ const styles = StyleSheet.create({
 });
 
 class First extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchUser('paolorovella');
   }
   render() {
+    const {
+      onButtonPress,
+      user,
+    } = this.props;
     return (
       <View style={styles.container}>
         {this.props.user &&
-          <Text style={styles.title}>Welcome {this.props.user.name}</Text>
+          <Text style={styles.title}>Welcome {user.name}</Text>
         }
         <Text style={styles.title}>First Screen</Text>
-        <NavButton destLabel="Second" buttonHandler={this.props.onButtonPress} />
+        <NavButton destLabel="Second" buttonHandler={onButtonPress} />
       </View>
     );
   }
@@ -40,12 +44,15 @@ class First extends Component {
 First.propTypes = {
   fetchUser: PropTypes.func.isRequired,
   onButtonPress: PropTypes.func.isRequired,
-  user: PropTypes.string,
+  user: PropTypes.object.isRequired,
 };
-
+First.defaultProps = {
+  user: {},
+};
 const mapStateToProps = (state) => ({
-  user: state.user,
+  user: state.userState.user,
 });
+
 const mapDispatchToProps = (dispatch) => ({
   fetchUser: (user) => {
     dispatch(actions.fetchUser(user));

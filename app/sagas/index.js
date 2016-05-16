@@ -13,5 +13,5 @@ export function * fetchUser(action) {
 }
 
 export function * sagas() {
-  yield* takeEvery(actions.fetchUser, fetchUser);
+  yield* takeEvery('USER_FETCH_REQUESTED', fetchUser);
 }

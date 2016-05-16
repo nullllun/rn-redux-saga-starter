@@ -24,16 +24,21 @@ class First extends Component {
   componentDidMount() {
     this.props.fetchUser('paolorovella');
   }
+
   render() {
     const {
       onButtonPress,
-      user,
+      userData,
     } = this.props;
     return (
       <View style={styles.container}>
-        {this.props.user &&
-          <Text style={styles.title}>Welcome {user.name}</Text>
-        }
+        <Text style={styles.title}>
+          {userData.user && !userData.isFetching ?
+            `Welcome ${userData.user.name}`
+            :
+            'Loading...'
+          }
+        </Text>
         <Text style={styles.title}>First Screen</Text>
         <NavButton destLabel="Second" buttonHandler={onButtonPress} />
       </View>
@@ -44,13 +49,15 @@ class First extends Component {
 First.propTypes = {
   fetchUser: PropTypes.func.isRequired,
   onButtonPress: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired,
+  userData: PropTypes.object.isRequired,
 };
+
 First.defaultProps = {
-  user: {},
+  userData: {},
 };
+
 const mapStateToProps = (state) => ({
-  user: state.userState.user,
+  userData: state.userState,
 });
 
 const mapDispatchToProps = (dispatch) => ({

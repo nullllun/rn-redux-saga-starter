@@ -1,7 +1,5 @@
 # rn-redux-saga-starter
 
-WORK IN PROGRESS
-
 A React Native starter based on [jlyman](https://github.com/jlyman/RN-NavigationExperimental-Redux-Example)'s example for building a mobile app using React Native, Redux, Redux Saga and NavigationExperimental.
 
 ## Requirements

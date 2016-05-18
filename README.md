@@ -1,6 +1,8 @@
-# rn-redux-saga-starter
+# React Native Redux Saga Starter
 
-A React Native starter based on [jlyman](https://github.com/jlyman/RN-NavigationExperimental-Redux-Example)'s example for building a mobile app using React Native, Redux, Redux Saga and NavigationExperimental.
+A React Native starter based on [jlyman](https://github.com/jlyman/RN-NavigationExperimental-Redux-Example)'s example for building a mobile app using **React Native**, **Redux**, **Redux Saga** and **NavigationExperimental**.
+
+![alt tag](https://media.giphy.com/media/l396BJOf3GNQJ5AgE/giphy.gif)
 
 ## Requirements
 - [Node](https://nodejs.org) `4.x` or newer
